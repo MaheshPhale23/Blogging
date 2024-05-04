@@ -1,0 +1,35 @@
+<section>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="logout-btn-container">
+          <a href="" (click)="logout()">
+            <button type="button" class="btn btn-danger mr-2 mt-2">Logout</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-3 mb-5">
+    <div class="row">
+
+      <div class="col-lg-4" *ngFor="let p of posts">
+        <div class="card mt-3">
+          <div class="card-header">
+            Post Information
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{ p.postName }}</h5>
+            <p class="card-text">Date: {{ p.createdAt }}</p>
+            <p class="card-text name">Created By: <span>{{ p.user.firstName }} {{p.user.lastName}}</span></p>
+            <p class="card-text checkActive">Active: <span>{{ p.active }}</span></p>
+            <a [routerLink]="'/update-admin/'+p.postId" class="btn btn-warning">Update</a>
+            <a class="btn btn-secondary mx-2">Delete</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

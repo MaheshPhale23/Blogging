@@ -1,0 +1,35 @@
+<section>
+  <div class="container">
+    <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
+      <div class="col-lg-8 mt-5">
+        <h3>REGISTER</h3>
+        <div class="card">
+          <div class="card-body">
+            <form (ngSubmit)="onRegister()">
+              <div class="mb-3">
+                <label for="regUsername" class="form-label">Username</label>
+                <input type="text" [(ngModel)]="userdata.username" class="form-control" name="regUsername" placeholder="Username must be unique">
+              </div>
+              <div class="mb-3">
+                <label for="regPassword" class="form-label">Password</label>
+                <input type="text" [(ngModel)]="userdata.password" class="form-control" name="regPassword" placeholder="Password must be 8-10 characters">
+              </div>
+              <div class="mb-3">
+                <label for="firstName" class="form-label">First Name</label>
+                <input type="text" [(ngModel)]="userdata.firstName" class="form-control" name="firstName" placeholder="Your first name">
+              </div>
+              <div class="mb-3">
+                <label for="lastName" class="form-label">Last Name</label>
+                <input type="text" [(ngModel)]="userdata.lastName" class="form-control" name="lastName" placeholder="Your last name">
+              </div>
+              <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+            <div class="mt-3">
+              <p>Already have an account? <a routerLink="/login">Login</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

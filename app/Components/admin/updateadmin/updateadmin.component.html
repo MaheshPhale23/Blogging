@@ -1,0 +1,33 @@
+<section>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-lg-4 offset-lg-4">
+        <div class="card mt-3">
+          <div class="card-header">
+            Post Information
+          </div>
+          <div class="card-body">
+            <!-- {{postdata | json}} -->
+            <form (ngSubmit)="onUpdate()">
+              <div class="form-group mb-3">
+                <label for="postName" class="mb-1">Post Name:</label>
+                <input type="text" [(ngModel)]="postdata.postName" class="form-control" name="postName" readonly>
+              </div>
+              <div class="form-group mb-4">
+                <label for="postDate" class="mb-1">Post Creation Date:</label>
+                <input type="date" [(ngModel)]="postdata.createdAt" class="form-control" name="postDate" readonly>
+              </div>
+              <div class="form-group mb-4">
+                <div class="form-check form-switch">
+                  <input class="form-check-input" [(ngModel)]="postdata.active" type="checkbox" id="postActive" name="postActive">
+                  <label class="form-check-label" for="postActive">Activate Post</label>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-warning">Update</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

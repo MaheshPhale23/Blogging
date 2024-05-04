@@ -1,0 +1,18 @@
+<section>
+  <div class="container mt-5 mb-5">
+    <div class="row">
+      <div class="col-lg-4" *ngFor="let p of posts">
+        <div class="card mt-3">
+          <div class="card-header">
+            Post Information
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{ p.postName }}</h5>
+            <p class="card-text">Date: {{ p.createdAt }}</p>
+            <p class="card-text">Created By: <span>{{ p.user.firstName }} {{p.user.lastName}}</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

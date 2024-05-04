@@ -1,0 +1,17 @@
+
+.logout-btn-container{
+  text-align: end;
+}
+.card-title {
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 15px;
+  text-decoration: underline;
+  color: rgb(98, 55, 192);
+}
+.name span{
+  font-weight: bolder;
+}
+.checkActive span{
+  color: rgb(169, 112, 5);
+}
